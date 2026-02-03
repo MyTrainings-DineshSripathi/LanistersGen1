@@ -414,9 +414,49 @@
     NOTE : When we are implementing them they will not execute the rest of the lines.
 */
 
-for(let i = 1; i <= 10; i ++){
-    if(i == 6){
-        continue
-    }
-    console.log(i)
-}
+// for(let i = 1; i <= 10; i ++){
+//     if(i == 6){
+//         continue
+//     }
+//     console.log(i)
+// }
+
+//to store more than 1 value inside a variable
+
+/* 
+    Admin dashboard : contact form in website
+
+    Arjun
+
+    Arun
+
+    Gowtham
+
+    Govind
+
+    Salem
+
+    Friday
+
+    Nova
+
+    single variable --> name
+
+    Array.
+        -- collection of data which can be assigned to a single variable.
+        Syntax : 
+            [data,...]
+
+        -- index values -- 0 - (n-1)
+
+        methods : 
+            
+*/
+
+let name = ["John Smith", "Tim Joe"]
+
+name[2] = 'Steve Smith'
+
+console.log(name[1])
+
+console.log(name)
