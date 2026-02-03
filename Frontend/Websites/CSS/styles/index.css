@@ -1,0 +1,357 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    margin: 0px;
+    padding-bottom: 3000px;
+}
+
+header{
+    background-color: #09947d;
+    color : white;
+    position: fixed;
+    top : 0%;
+    right: 0;
+    left : 0;
+    z-index: 100;
+}
+
+header a{
+    text-decoration: none;
+    color : inherit;
+}
+
+header .menu-container,
+header .contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding : 10px;
+}
+
+header .contact-container .contact{
+    display: flex;
+    align-items: center;
+    gap : 10px;
+    font-size: .8em;
+}
+
+header .contact-container .social-media{
+    font-size: .8em;
+}
+
+header .menu-container{
+    background-color: white;
+    color : black;
+}
+
+header .menu-container .company-name{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+header .menu-container nav{
+    display: flex;
+    gap : 20px;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background : linear-gradient(45deg, white, #09947d, #014136);
+    background-size: 400%;
+    background-position: 200% 200%;
+    animation: slide-background 15s linear infinite;
+}
+
+
+main .hero-section{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    flex-wrap: wrap;
+}
+
+main .hero-section img{
+    width: 100%;
+    height: 100%;
+}
+
+main .hero-section .content-container,
+main .hero-section .image-container{
+    min-width: 250px;
+    flex : 1;
+}
+
+main .hero-section .image-container{
+    position: relative;
+    z-index: 90;
+}
+
+main .hero-section .image-container .floating-content{
+    padding : 15px;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap : 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.336);
+    position: absolute;
+    bottom : -10%;
+    left : -5%;
+}
+
+main .hero-section .image-container img{
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+}
+
+main .hero-section .floating-content{
+    box-shadow: 0px 0px 10px black;
+    animation: float-up-down 7s ease-in-out infinite;
+}
+
+@keyframes float-up-down {
+    0%{
+        transform: translateY(-10px) scale(.8);
+    }
+    50%{
+        transform: translateY(10px) scale(1);
+    }
+    100%{
+        transform: translateY(-10px) scale(.8);
+    }
+}
+
+main .hero-section .floating-content div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .hero-section .floating-content .stats{
+    color : #1d9e1d;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+main .hero-section .floating-content .stats-title{
+    font-size: .7rem;
+    color : grey;
+}
+
+.heading{
+    position: sticky;
+    top : 0;
+}
+
+main .hero-features{
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap : 10px;
+}
+
+main .hero-features .container{
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 10px;
+    padding : 10px;
+    border-radius: 10px;
+    cursor : pointer;
+    transition : background-color .3s linear, transform .3s linear;
+}
+
+main .hero-features .container .icon{
+    color: #09947d;
+    background-color : rgb(218, 218, 218);
+    padding : 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition : background-color 1s linear, transform .5s linear;
+    transform : scale(.9);
+}
+
+main .hero-features .container .feature-title{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+main .hero-features .container .feature-description{
+    font-size: .8rem;
+    text-align: center;
+    color : grey;
+}
+
+main .hero-features .container:hover{
+    transform : translateY(-10px);
+}
+
+main .hero-features .container:hover .icon{
+    background: #09947d;
+    color : white;
+    transform: rotate(180deg);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    gap : 10px 20px;
+}
+
+.grid-container .div1,
+.grid-container .div3,
+.grid-container .div5,
+.grid-container .div7,
+.grid-container .div9{
+    background-color: red;
+}
+
+.grid-container .div2,
+.grid-container .div4,
+.grid-container .div6,
+.grid-container .div8,
+.grid-container .div10{
+    background-color: yellow;
+}
+
+.grid-container .div3{
+    grid-row-start: 1;
+    grid-row-end : 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.flex-container{
+    display: flex;
+    gap : 10px;
+    margin-bottom: 40px;
+}
+
+.flex-container .div1{
+    background-color: red;
+    color : white;
+    flex : 1;
+}
+
+.flex-container .div2{
+    background-color: green;
+    color : white;
+    width: 200px;
+}
+
+.flex-container .div3{
+    background-color: violet;
+    flex : 1;
+}
+
+.animation-container{
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    /* 
+        starting point 
+
+        if we don't use from then the default properties are considered as starting points
+    */
+    /* from{
+        background-color: red;
+    } */
+    /* 
+        ending point 
+        if we don't use to then the default properties are considered as ending points    
+    */
+    /* to{
+        background-color: black;
+        box-shadow: 0px 0px 40px red;
+    } */
+
+    0%{
+        background-color: red;
+    }
+    50%{
+        background: black;
+        box-shadow: 0px 0px 20px red,
+        0px 0px 20px white, 0px 0px 20px rgb(255, 0, 0), 0px 0px 20px rgb(255, 255, 255);
+    }
+    100%{
+        background : red;
+    }
+}
+
+.before-after div{
+    position: relative;
+    width: 100%;
+    height: 7px;
+    background-color: rgb(143, 143, 143);    
+    border-radius: 10px;
+}
+
+.before-after div::after{
+    content: '';
+    width: 50%;
+    height: 7px;
+    background-color: #014136;
+    display: flex;
+    border-radius: 10px;
+    position: absolute;
+    top : 0;
+    left : 0;
+    z-index: 9;
+}
+
+.before-after div::before{
+    content: '';
+    max-width: 80%;
+    height: 7px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    border-radius: 10px;
+    position: absolute;
+    top : 0;
+    left : 0;
+    z-index: 10;
+}
+
+@media (min-width:0px) and (max-width:767px){
+    header .menu-container .nav-menu{
+        display: none;
+    }
+    main{
+        margin-top: 50px;
+    }
+
+    main .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:768px) and (max-width:1279px){
+    
+}

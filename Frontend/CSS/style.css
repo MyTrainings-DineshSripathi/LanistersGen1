@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=UnifrakturMaguntia&display=swap');
+
+/* div{
+    background-color: black;
+    color : white;
+}
+
+div{
+    background-color: orangered;
+}
+
+.sample{
+    background-color: yellow;
+    color : black;
+}
+
+#header{
+    background-color : brown;
+    color : white;
+}
+
+.parent{
+    font-size: 20px;
+} */
+
+@font-face {
+    font-family: my-font1;
+    src: url('./fonts/Delius/Delius-Regular.ttf');
+}
+
+@font-face {
+    font-family: my-font2;
+    src: url('./fonts/UnifrakturMaguntia/UnifrakturMaguntia-Regular.ttf');
+}
+
+h1{
+    text-shadow: 10px -10px 2px red;
+    /* x-axis y-axis blurness */
+    font-family: my-font1;
+}
+
+.parent{
+    font-weight: 700;
+    font-style: italic;
+    background-color: aliceblue;
+}
+
+.child{
+    font-size: 1em; /* 2 * 20 = 40 */
+    font-weight: 900;
+    text-decoration: 1px solid underline red;
+    text-transform: lowercase;
+}
+
+.sample{
+    /* letter-spacing: 10px; */
+    /* word-spacing: 10px; */
+    line-height: 50px;
+    font-family: my-font2, cursive;
+}
+
+
+.background{
+    /* background : linear-gradient(to left, #00F7FF,#B0FFFA, #FF0087, #FF7DB0); */
+    /* background : radial-gradient(circle at top left,#00F7FF,#09887f); */
+    background: url('https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* 
+    padding : space within the content
+    margin : space b/w the content
+*/
+
+.sample1{
+    /* background-color: black;
+    color : white; */
+    /* margin-top : 10px;
+    margin-left : 10px;
+    margin-right : 10px;
+    margin-bottom : 10px;
+
+    margin : single-value;
+
+    top-bottom : 10px | left-right : 20px
+
+    margin : top-bottom left-right;
+
+    top : 10px | left : 20px |  right : 30px; bottom : 40px
+
+    margin : top right bottom left;
+
+    padding-top : 10px;
+    padding-left : 10px;
+    padding-right : 10px;
+    padding-bottom : 10px; */
+
+    margin :  10px 20px 30px 40px;
+    padding : 10px;
+
+    border: 3px solid red;
+    border-top : 1px dotted black;
+}

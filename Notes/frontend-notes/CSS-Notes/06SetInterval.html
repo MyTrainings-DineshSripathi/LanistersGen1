@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's App</title>
+</head>
+<body>
+  <button id = "Add">Add</button>
+  <button id="Remove">Remove</button>
+</body>
+<script>
+  const Addbutton = document.getElementById("Add");
+  console.log(Addbutton.innerHTML);
+  let count = 0;
+  
+  const Removebutton = document.getElementById("Remove");
+  console.log(Removebutton.innerHTML);
+
+  Addbutton.addEventListener("click",() =>{
+    count++;
+    console.log(count);
+  });
+  
+
+
+  Removebutton.addEventListener("click",() =>{
+    count --;
+  });
+
+  const title = document.getElementsByTagName("title")[0];
+  console.log(title.innerHTML);
+
+  setInterval(() => {
+    title.innerHTML = "Message (" + count + ")";
+    setTimeout(() => {
+      title.innerHTML = "What's App";
+    }, 3000);
+  },2000);
+
+</script>
+</html>

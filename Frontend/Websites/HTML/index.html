@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/mainImage.jpg" type="image/x-icon">
+    <title>Ummai - Home</title>
+</head>
+<body>
+
+    <!-- 
+        header - nav + logo/name
+        main
+        footer
+
+        nav
+        section
+
+        article
+        aside
+    -->
+    <header>
+        <div>
+            Ummai
+        </div>
+        <div>
+            <nav>
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">menu</a>
+                <a href="#">events</a>
+                <a href="#">chefs</a>
+                <a href="#">Gallery</a>
+                <a href="#">services</a>
+                <a href="#">contact us</a>
+            </nav>
+            <div>
+                Book a Table
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <!-- 
+            input types : 
+                1. text (default)
+                2. email
+                3. password
+                4. number - 0-9, . , e, -
+                5. date
+                6. time
+                7. week
+                8. range
+                9. color picker
+                10. file
+
+                11. radio
+                12. checkbox
+                13. submit
+                14. reset
+        -->
+
+        <section>
+            <h1>Form</h1>
+            <form action="http://127.0.0.1:3000/Websites/HTML/index.html">
+                <div>
+                    <textarea name="" id="" cols=100 rows=10></textarea>
+                </div>
+                <div>
+                    <select name="" id="">
+                        <option value="">select an option</option>
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                        <option value="option3">option3</option>
+                        <option value="option4">option4</option>
+                        <option value="option5">option5</option>
+                        <option value="option6">option6</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">other</label>
+                </div>
+                <div>
+                    <label for="fullname">Full Name : </label>
+                    <input id="fullname" type="text" name="fullName" placeholder="Enter full name" maxlength="15" required>
+                </div>
+                <div>
+                    <label for="email">Email : </label>
+                    <input id="email" type="email" name="email" placeholder="Enter email address" required>
+                </div>
+                <div>
+                    <input type="checkbox" id="option1" name="option" value="option1"> <label for="option1">option1</label>
+                    <input type="checkbox" id="option2" name="option" value="option2"> <label for="option2">option2</label>
+                </div>
+                <button type="submit">Submit</button>
+                <button type="reset">Cancel</button>
+            </form>
+        </section>
+        <section>
+            <div>
+                <h1>Enjoy your healthy Delicious Food</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus labore vel nemo nulla deserunt, fugit reiciendis distinctio est, excepturi inventore atque obcaecati illum nihil eaque expedita blanditiis quod adipisci asperiores.
+                </p>
+                <div>
+                    <a href="#">Book a Table</a>
+                    <a href="#">watch a video</a>
+                </div>
+            </div>
+            <div>
+                <img width="100%" src="./assets/mainImage.jpg" alt="image1">
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
