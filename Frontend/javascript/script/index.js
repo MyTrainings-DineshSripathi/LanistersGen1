@@ -40,7 +40,7 @@
     variable : storage container which stores the data.
 
     to create a variable we have to follow some rules : 
-        1. you can't start a variable name with a number
+        1. you can't start a variable  with a number
             don't :   
                 1a, 2b, 5
             
@@ -169,13 +169,13 @@
 // console.log(result)
 
 
-// const username = "sachin@gmail.com"
+// const user = "sachin@gmail.com"
 // const password = "Sachin@1234"
 
-// const db_username = "sachin@gmail.com"
+// const db_user = "sachin@gmail.com"
 // const db_password = "Sachin@1234"
 
-// const status = (username == db_username && password == db_password)? "login success" : "login failed! Invalid user details"
+// const status = (user == db_user && password == db_password)? "login success" : "login failed! Invalid user details"
 
 // console.log(status)
 
@@ -306,29 +306,29 @@
 //     console.log("Fail")
 // }
 
-// const username = "sachin@gmail.com"
+// const user = "sachin@gmail.com"
 // const password = "Sachin@1234"
 
-// const db_username = "sachin@gmail.com"
+// const db_user = "sachin@gmail.com"
 // const db_password = "Sachin@1234"
 
 
-// if(username == db_username && password == db_password){
+// if(user == db_user && password == db_password){
 //     console.log("login success")
 // }else{
 //     console.log("invalid credentials")
 // }
 
 
-// if(username == db_username && password == db_password){
+// if(user == db_user && password == db_password){
 //     console.log("login success")
 // }
 
-// if(!(username == db_username && password == db_password)){
+// if(!(user == db_user && password == db_password)){
 //     console.log("invalid credentials")
 // }
 
-// if(username == db_username){
+// if(user == db_user){
 //     if(password == db_password){
 //         console.log("login success")
 //     }
@@ -440,7 +440,7 @@
 
     Nova
 
-    single variable --> name
+    single variable --> 
 
     Array.
         -- collection of data which can be assigned to a single variable.
@@ -449,14 +449,98 @@
 
         -- index values -- 0 - (n-1)
 
-        methods : 
+        insertion
+            start
+                array[0] = value
+                move all the values towards the next index
+                    0 -> 1, 1 -> 2, 2 -> 3
+            end
+                array[size] = value
+            in-between
+                1. find the index place and then whatever values are present in and after the index place has to move towards right side.
+        deletion
+        search
+        methods :
+            length -- used to return the length/ size of an array.
+                syntax : 
+                    array.length
             
-*/
+            insert : 
+                1. push -- will add data at the end of array.
+                    syntax : 
+                        array.push(data)
+                2. unshift -- will add the data at the start of an array.
+                    syntax : 
+                        array.unshift(data)
+                3. splice -- will add data in-between the array.
+                    syntax : 
+                        array.splice(index, no.of elements to delete, data)
+            Delete : 
+                1. pop -- will remove data from the end of an array
+                    syntax : 
+                        array.pop()
+                2. shift -- will remove data from the start of an array
+                    syntax : 
+                        array.shift()
+                3. splice -- will remove data that is in-between array.
+                    syntax ; 
+                        array.splice(index, deleteCount)
+            Searching : 
+                1. indexOf -- It will search for that valuue that we provide and if the value is present then it will say return the index value if not returns -1.
+                    syntax : 
+                        aray.indexOf(data)
+                2. at -- it will return the data/ value that is present at the given index
+                    syntax : 
+                        arrayName.at(index)
+            
+            sort : will helps us to sort the array.
+                syntax : 
+                    arrayname.sort()
+            join : will join the entire array into a string
+                syntax : 
+                    arrayName.join("characterToJoin")
+            reverse : will reverse the entire array
+                syntax : 
+                    arrayName.reverse()
 
-let name = ["John Smith", "Tim Joe"]
+                
+            
+*/           
 
-name[2] = 'Steve Smith'
+// let  arrayName= ["John Smith", "Tim Joe", "Joseph"]
 
-console.log(name[1])
+// console.log(arrayName.length) //3
+// console.log(arrayName)
 
-console.log(name)
+// // [.length] = 'Steve Smith' //overriding
+
+// arrayName[arrayName.length] = 'Steve Smith' 
+
+// //  ['John Smith', 'Tim Joe', 'Joseph', 'Steve Smith', "XYZ"]
+
+// console.log(arrayName[1])
+
+// console.log(arrayName)
+// console.log(arrayName.length) //4
+
+// arrayName.push("Harry Potter")
+// console.log(arrayName)
+
+// arrayName.unshift("Goorg")
+// console.log(arrayName)
+
+// arrayName.splice(3, 0, "Ben Tennison", "Nira", "Bentley")
+// console.log(arrayName)
+
+// arrayName.pop()
+// console.log(arrayName)
+
+// arrayName.shift()
+// console.log(arrayName)
+
+// console.log(arrayName.indexOf('Ben Tennison'))
+// console.log(arrayName.at(5))
+// console.log(arrayName.includes("Ben Tennison"))
+// console.log(arrayName.sort())
+// console.log(arrayName.join('-'))
+// console.log(arrayName.reverse())
