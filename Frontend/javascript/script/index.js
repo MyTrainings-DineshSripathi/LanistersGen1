@@ -544,3 +544,94 @@
 // console.log(arrayName.sort())
 // console.log(arrayName.join('-'))
 // console.log(arrayName.reverse())
+
+
+/* 
+    strings : 
+        collection of character(a-z, spcl, digits) and immutable (can't change or modify)
+        -- We have to wrap the character in b/w "" or '' or `` --> Strings
+
+        concat : combining multiple strings together to form a single string.
+            '+'
+        placeholder : adds the data of a variable inside the string.
+            ${variableName}
+        
+        methods : 
+            length : will return the size of the string
+                syntax ; 
+                    strVarname.length
+            toLowerCase() : will convert all the string characters to lower case
+                syntax : 
+                    strVarname.toLowerCase()
+            toUpperCase() : will convert all the string characters to upper case
+                syntax : 
+                    strVarname.toUpperCase()
+            charAt() : will return the character that is present at the given index.
+                syntax : 
+                    strVarname.charAt(index)
+            concat() : will combine two string together
+                syntax : 
+                    mainStr.concat("combineStr")
+            startsWith() : will check wether the given string started with a certain character or word.
+                syntax : 
+                    strVarname.startsWith("char/word")
+            endsWith() : will check wether the given string ended with acertain character or word.
+                syntax : 
+                    strVarname.endsWith("char/word")
+            trim() : will remove the extra space at the start and end of the string.
+                syntax : 
+                    strVarname.trim()
+            includes() ; will return true or false based upon the string that we provided to check.
+                syntax : 
+                    strVarname.includes("string")
+            replace() : will replace the string that too which it encounters first.
+                syntax : 
+                    strVarname.replace('findStr', 'replaceStr')
+            replaceAll() : will replace the entire strs if the given string matches inside the org. string
+                syntax : 
+                    strVarname.replaceAll('findStr', 'replaceStr')
+            padEnd() : will add content to the string at the end, when the length didn't satisfied.
+                syntax : 
+                    strVarname.padEnd('length', 'replacementChar')
+            padStart() : will add content to the string at the start, when the length didn't satisfied.
+                syntax : 
+                    strVarname.padStart('length', 'replacementChar')
+*/
+
+// let name = "Tony"
+
+// name = 'Banner'
+
+// name = `Gowtham`
+
+let name = "Ben Tennison"
+let age = 14
+let gender = "male"
+
+// const statement = "My name is "+name+". My age is "+ age+". I am "+ gender
+let statement = `My name is ${name}. My age is ${age}. I am ${gender}`
+
+statement[11] = 'G'
+
+console.log(statement)
+
+console.log(statement.length)
+
+console.log(statement.toLowerCase())
+console.log(statement.toUpperCase())
+console.log(statement.charAt(66))
+console.log(statement.concat(" . Harry potter and the multi-verse"))
+console.log(statement.startsWith('my'))
+console.log(statement.endsWith('my'))
+console.log(statement.trim())
+console.log(statement.includes("Ben Ten"))
+console.log(statement.replace("My", "His"))
+console.log(statement.replaceAll("My", "His"))
+// Ex : LISXXXXXXXM
+// ex : *******5643
+
+let phone = "1"
+
+console.log(phone.padEnd(10, '_'))
+
+console.log(statement)
