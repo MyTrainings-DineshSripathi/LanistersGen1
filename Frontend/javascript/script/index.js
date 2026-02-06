@@ -596,6 +596,9 @@
             padStart() : will add content to the string at the start, when the length didn't satisfied.
                 syntax : 
                     strVarname.padStart('length', 'replacementChar')
+            split() : will divide the string based on the identifier(character, alpha, word). It will return us a list of divided string.
+                syntax : 
+                    strVarname.split(identifier)
 */
 
 // let name = "Tony"
@@ -604,34 +607,140 @@
 
 // name = `Gowtham`
 
-let name = "Ben Tennison"
-let age = 14
-let gender = "male"
+// let name = "Ben Tennison"
+// let age = 14
+// let gender = "male"
 
-// const statement = "My name is "+name+". My age is "+ age+". I am "+ gender
-let statement = `My name is ${name}. My age is ${age}. I am ${gender}`
+// // const statement = "My name is "+name+". My age is "+ age+". I am "+ gender
+// let statement = `My name is ${name}. My age is ${age}. I am ${gender}`
 
-statement[11] = 'G'
+// statement[11] = 'G'
 
-console.log(statement)
+// console.log(statement)
 
-console.log(statement.length)
+// console.log(statement.length)
 
-console.log(statement.toLowerCase())
-console.log(statement.toUpperCase())
-console.log(statement.charAt(66))
-console.log(statement.concat(" . Harry potter and the multi-verse"))
-console.log(statement.startsWith('my'))
-console.log(statement.endsWith('my'))
-console.log(statement.trim())
-console.log(statement.includes("Ben Ten"))
-console.log(statement.replace("My", "His"))
-console.log(statement.replaceAll("My", "His"))
-// Ex : LISXXXXXXXM
-// ex : *******5643
+// console.log(statement.toLowerCase())
+// console.log(statement.toUpperCase())
+// console.log(statement.charAt(66))
+// console.log(statement.concat(" . Harry potter and the multi-verse"))
+// console.log(statement.startsWith('my'))
+// console.log(statement.endsWith('my'))
+// console.log(statement.trim())
+// console.log(statement.includes("Ben Ten"))
+// console.log(statement.replace("My", "His"))
+// console.log(statement.replaceAll("My", "His"))
+// // Ex : LISXXXXXXXM
+// // ex : *******5643
 
-let phone = "1"
+// let phone = "1"
 
-console.log(phone.padEnd(10, '_'))
+// console.log(phone.padEnd(10, '_'))
 
-console.log(statement)
+// // I have been in mary jones till my marriage
+// // 'I have been in ', 'ary jones till ', 'y ', 'arriage'
+
+// console.log(statement.split("m"))
+
+// console.log(statement)
+
+/* 
+    within a range 1- 10/100/1000 -- loops
+
+    Function : 
+        function is a block of reusable code.
+
+        steps : 
+            1. we have to use function keyword to create a function
+                syntax :   
+                    function functionName(){
+                        //block of code
+                    }
+            NOTE : When creating a function name follow the same rules that we are using to create variable
+            2. To call the function we have to use functionName()
+            3. To receive the value we have to use the parameter (variable which stores the value which was passed at the calling function part).
+                syntax : 
+                    function functionName(parameter,...){
+                        //block of code
+                    }
+            4. Default parameter (optional): 
+                A parameter which will have a default value which will be used when we didn't pass any value at the time of calling the function.
+                    syntax : 
+                        function functionName(parameter=defaultValue){
+                            //block of code
+                        }
+            5.  To return value from the function we always use keyword return inside the function.
+                    syntax : 
+                        function functionName(parameter=defaultValue){
+                            //block of code
+                            return value
+                        }
+            NOTE : whenever we are returning a value we can return only one value for a function
+*/  
+
+// function isEvenOrOdd(newNumber=89){
+//     if(newNumber % 2 == 0){
+//         console.log(newNumber, "is even number")
+//     }else{
+//         console.log(newNumber,"is odd number")
+//     }
+
+//     let a = 5
+//     let b = 7
+
+//     let c = a + b
+
+//     console.log(c)
+
+//     return c
+// }
+
+// let functionValue = isEvenOrOdd()
+// console.log(functionValue)
+// console.log("statement1")
+// console.log("statement1")
+// console.log("statement1")
+
+// isEvenOrOdd()
+
+// isEvenOrOdd(34)
+
+// console.log("statement1")
+// console.log("statement1")
+// console.log("statement1")
+
+// isEvenOrOdd()
+
+/* 
+    Functions are treated as values.
+
+    by using function keyword : 
+        syntax ; 
+            function(){
+                //block of code
+            }
+
+    Arrow Function : 
+        syntax : 
+            () => {
+                //block of code    
+            }
+*/
+
+function sample(){
+    console.log("sample line here")
+}
+
+const test = function(){
+    console.log("test function called")
+}
+
+const dummy = () => {
+    console.log("dummy function called")
+}
+
+console.log(sample)
+
+sample()
+test()
+dummy()
