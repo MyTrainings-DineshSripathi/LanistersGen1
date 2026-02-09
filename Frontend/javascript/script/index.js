@@ -727,20 +727,98 @@
             }
 */
 
-function sample(){
-    console.log("sample line here")
-}
+// function sample(){
+//     console.log("sample line here")
+// }
 
-const test = function(){
-    console.log("test function called")
-}
+// const test = function(){
+//     console.log("test function called")
+// }
 
-const dummy = () => {
-    console.log("dummy function called")
-}
+// const dummy = () => {
+//     console.log("dummy function called")
+// }
 
-console.log(sample)
+// console.log(sample)
 
-sample()
-test()
-dummy()
+// sample()
+// test()
+// dummy()
+
+/* 
+    function as a value.
+
+    callback function : 
+        A function which will be called inside another function.
+        
+        Timing functions : 
+            These functions use time to perform a task.
+
+                1. setTimeout
+                    When the given time is out. Then it is going to perform the task.
+                        syntax : 
+                            setTimeout(callback, time in ms)
+                2. setInterval
+
+*/
+
+// function sample(){
+//     console.log("sample function statement")
+// }
+
+// function mainFunction(callback){
+//     console.log("This is a main function")
+
+//     callback() //calling the callback function here
+// }
+
+// mainFunction(sample)
+
+// console.log("line sample")
+// console.log("line sample")
+// console.log("line sample")
+
+// setInterval(sample, 1000)
+
+// console.log("line sample")
+// console.log("line sample")
+// console.log("line sample")
+// console.log("line sample")
+
+// for(let i = 1; i <= 100000; i ++){
+//     console.log("line sample")
+// }
+
+/* 
+    array methods : 
+        1. map : 
+            used to create a duplicate array from the base array. while duplicating it we can modify the data. In order to store the data we have to return the value.
+            syntax : 
+                arrayName.map(callbackFn)
+        2. filter
+        3. forEach : 
+            Used to iterate the array. The iterations happens based on the data present inside the array not on the index values.
+            
+            syntax : 
+                arrayName.forEach(callbackFn)
+
+                function callbackName(value, index, array){
+
+                }
+        4. find
+        5. reduce
+*/
+
+let a = [1,2,3,4,5]
+
+a[10] = 50
+
+console.log(a)
+
+// for(let i = 0; i < a.length; i ++){
+//     console.log(`data = ${a[i]}, index = ${i}, array = ${a}`)
+// }
+
+// a.forEach((data, index, array) => {
+//     console.log(`data = ${data}, index = ${index}, array = ${array}`)
+// })
