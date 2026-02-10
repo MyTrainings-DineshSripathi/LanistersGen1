@@ -795,7 +795,18 @@
             used to create a duplicate array from the base array. while duplicating it we can modify the data. In order to store the data we have to return the value.
             syntax : 
                 arrayName.map(callbackFn)
-        2. filter
+
+                function callbackName(value, index, array){
+
+                }
+        2. filter : 
+            used to filter to filter the data from the array based on a condition. It will create a array and the array is going to be different the base array. In order to store the data inside the new array we have to return true or false. true -- store | false -- not to store
+                syntax : 
+                    arrayName.filter(callbackFn)
+
+                    function callbackName(value, index, array){
+
+                    }
         3. forEach : 
             Used to iterate the array. The iterations happens based on the data present inside the array not on the index values.
             
@@ -805,15 +816,69 @@
                 function callbackName(value, index, array){
 
                 }
-        4. find
-        5. reduce
+        4. find : 
+            used to find the data inside the array. If the data is found then the data is going to be returned.
+                syntax : 
+                    arrayName.find(callbackFn)
+        5. reduce : 
+            combine all the values inside an array into a single value. 
+                syntax : 
+                    arrayName.reduce(callbackFn)
+
+                    function callBackFn(acc, curr, index, array){
+
+                    }
 */
 
-let a = [1,2,3,4,5]
+let a = [1,2,3,4,5] //101
 
-a[10] = 50
+// a[10] = 50
+
+
+// let b = a //take a seperate location. 102 -- stores the reference memory of a [101]
+
+// console.log(b)
+
+// b = a.map(value => {
+//     return value + value
+// }) // replacing the [] with the updated array from the a -- 102.
+
+// for(let i = 0 ; i < a.length; i ++){
+//     if(a[i]){
+//         b[i] = a[i]
+//     }else{
+//         continue
+//     }
+// }
+
+// let b = a.filter((value) => {
+//     return value % 2 == 0
+// })
+
+// let b = a.find((value) => {
+//     return value == 17
+// })
+
+let b = a.reduce((prev, curr, index, array) => {
+    console.log(`prev = ${prev}`)
+    console.log(`curr = ${curr}`)
+    console.log(`index = ${index}`)
+    console.log(`array = ${array}`)
+
+    return prev + curr
+})
+
+console.log(`a = ${a}`)
+console.log(`b = ${b}`)
+
+// a[2] = 33
 
 console.log(a)
+console.log(b)
+
+// b.forEach((value) => {
+//     console.log(value)
+// })
 
 // for(let i = 0; i < a.length; i ++){
 //     console.log(`data = ${a[i]}, index = ${i}, array = ${a}`)
