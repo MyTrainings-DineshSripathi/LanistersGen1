@@ -830,7 +830,7 @@
                     }
 */
 
-let a = [1,2,3,4,5] //101
+// let a = [1,2,3,4,5] //101
 
 // a[10] = 50
 
@@ -858,23 +858,23 @@ let a = [1,2,3,4,5] //101
 // let b = a.find((value) => {
 //     return value == 17
 // })
+// -
+// let b = a.reduce((prev, curr, index, array) => {
+//     console.log(`prev = ${prev}`)
+//     console.log(`curr = ${curr}`)
+//     console.log(`index = ${index}`)
+//     console.log(`array = ${array}`)
 
-let b = a.reduce((prev, curr, index, array) => {
-    console.log(`prev = ${prev}`)
-    console.log(`curr = ${curr}`)
-    console.log(`index = ${index}`)
-    console.log(`array = ${array}`)
+//     return prev + curr
+// })
 
-    return prev + curr
-})
+// console.log(`a = ${a}`)
+// console.log(`b = ${b}`)
 
-console.log(`a = ${a}`)
-console.log(`b = ${b}`)
+// // a[2] = 33
 
-// a[2] = 33
-
-console.log(a)
-console.log(b)
+// console.log(a)
+// console.log(b)
 
 // b.forEach((value) => {
 //     console.log(value)
@@ -887,3 +887,160 @@ console.log(b)
 // a.forEach((data, index, array) => {
 //     console.log(`data = ${data}, index = ${index}, array = ${array}`)
 // })
+
+/* 
+    spread and rest operator : (...)
+        spread Operator : 
+            Used to spread the data of an array
+            syntax : 
+                ... arrayVariable
+
+        rest operator/ parameter : 
+            it is used to handle the unexpected args in a function
+
+            syntax : 
+                function functionName(...parameterName){
+                    //code here
+                }
+*/
+
+// function sample(a, ...b){
+//     console.log(a)
+//     console.log(b)
+// }
+
+
+// sample(11)
+
+// sample(11,12,13,14)
+
+// let a = [1,2,3,4,5]
+
+// let b = [11,12,13,...a]
+
+// console.log(a)
+// console.log(b)
+
+
+/* 
+    setTimeout : 
+        syntax : 
+            setTimeout(callbackFn, time(ms))
+    setInterval : 
+        syntax : 
+            setInterval(callbackFn, time(ms))
+*/
+
+// let count = 0
+
+// const id = setInterval(() => {
+//     count ++
+//     console.log("This is set timeour function")
+//     if(count == 5){
+//         console.log("clearing... interval")
+//         clearInterval(id)
+//     }
+// }, 5000)
+
+// console.log(id)
+
+/* 
+    object : 
+        will collection of data which stores data in key pair value. 
+            syntax : 
+                {
+                    key : value,
+                    .
+                    .
+                    .
+                    key : () => {
+
+                        }
+                }
+        To access the data inside an object we have to use 'objectname.keyName'
+*/
+
+// const student = {
+//     name : "rahul",
+//     age : 14,
+//     class : 9,
+//     phone : 9876543231
+// }
+
+// student.email = "rahul@email.com"
+
+// console.log(student)
+
+console.log(document)
+
+// document.writeln("<h1>Hello this is a javascript content</h1>")
+
+/* 
+    selectors in javascript : 
+        We select the existing HTML elements using the method. The selected element will be in form of object.
+        tag selector : 
+            getElementsByTagname('tagName')
+        class selector : 
+            getElementsByClassname('className)
+        id selector ; 
+            getElementById('idName')
+        
+        querySelector : 
+            All rounder which is used to select an element based on tagName, className and Id. It will always returns the first element.
+
+            querySelector('tag/ .class/ #id')
+        
+        querySelectorAll : 
+            It return the collection.
+            querySelectorAll()
+*/
+
+// console.log(document.getElementsByTagName('p'))
+
+/* 
+    insert a text inside an element.
+        innerText and innerHTML are used to handle the content inside an element.
+        innerText -- if it finds any html code it will consider as a text
+        innerHTML -- if it finds any html code it will consider it as html code
+*/
+
+// const root = document.getElementById('root')
+
+// console.log(root)
+
+// root.innerHTML = "This is inserted by Javascript."
+
+// let error = prompt("Enter a error status")
+
+// console.log(error)
+
+// if(error.toLowerCase() == 'true'){
+//     root.classList.add('error')
+//     root.classList.remove('success')
+// }else{
+//     root.classList.remove('error')
+//     root.classList.add('success')
+// }
+
+
+/* 
+    Event Listeners : 
+        --> They will listen for a certain event.
+        --> To implement the event listener we need to have a function which executes a task whenever the event is generated.
+
+        addEventListener(eventType, callbackFn)
+*/
+
+// function sample(event){
+//     console.log("Sample function called", event)
+// }
+
+// function test(){
+//     console.log("test function called")
+// }
+
+// const para1 = document.getElementById('para1')
+
+
+// para1.addEventListener('mousemove', sample)
+// para1.addEventListener('mousemove', test)
