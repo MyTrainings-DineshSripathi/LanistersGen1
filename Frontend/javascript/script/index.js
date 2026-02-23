@@ -1044,3 +1044,141 @@ console.log(document)
 
 // para1.addEventListener('mousemove', sample)
 // para1.addEventListener('mousemove', test)
+
+/* 
+    fetch : 
+    --> It is used to fetch the data from the server.
+    --> Async code. 
+         -- Success - resolved
+         -- Failed - rejected
+*/
+
+
+// let email = true
+
+// function fetchData(){
+//     return new Promise((resolved, rejected) => {
+//         setTimeout(() => {
+//             if(email){
+//               resolved("email found")
+//             }else{
+//               rejected("email not found")
+//             }
+//         }, 4000)
+//     })
+// }
+
+// method chaining : linking one function wth the another one using .then()
+
+// fetchData().then((response) => {console.log(response)})
+
+/* 
+    syntax : 
+        fetch('url', request-headers(optional))
+
+        request-headers (object): 
+            1. method : Type of request we are passing to the server/ backend
+            2. headers : 
+                1. Autharization : there we will pass the token
+                2. cookie
+                .
+                .
+                .
+    
+    1. fetch(url) //send a response but has to be handled in .then()
+    2. response -- in json format to convert it to object we have to use json()
+    3. data
+*/
+// fetch('https://fakestoreapi.com/products').then((response) => {
+//     console.log(response.json())
+//     return response.json()
+// }).then((data) => {
+//     console.log(data)
+// }).catch((error) => {
+//     console.log("Un expeceted error has happened")
+//     console.log(error)
+// })
+
+// console.log(fetch('https://fakestoreapi.com/products'))
+// console.log("fetch('https://fakestoreapi.com/products')")
+// console.log("fetch('https://fakestoreapi.com/products')")
+// console.log("fetch('https://fakestoreapi.com/products')")
+// console.log("fetch('https://fakestoreapi.com/products')")
+// console.log("fetch('https://fakestoreapi.com/products')")
+// console.log("fetch('https://fakestoreapi.com/products')")
+
+/* 
+    with async - await latest way of calling the function. 
+    we will create a function which handles the async code.
+
+    syntax : 
+        async function functionName(){
+
+        }
+*/
+
+const productsContainer = document.getElementById('products')
+
+// loader
+productsContainer.innerHTML += Array.from({length : 9}).map(() => {
+    return  `
+    <article class="product-card skeleton">
+        <div class="product-image shimmer"></div>
+            <div class="product-content">
+                <div class="skeleton-text category shimmer"></div>
+                <div class="skeleton-text title shimmer"></div>
+                <div class="skeleton-text title-short shimmer"></div>
+                <div class="skeleton-text description shimmer"></div>
+                <div class="skeleton-text description shimmer"></div>
+                <div class="product-footer">
+                <div class="skeleton-text price shimmer"></div>
+                <div class="skeleton-button shimmer"></div>
+            </div>
+        </div>
+    </article>
+`
+})
+
+async function fetchData(){
+    const response = await fetch('https://fakestoreapi.com/products')
+    console.log(response)
+    if(response.ok){
+        console.log("response is successful")
+        productsContainer.innerHTML = ''
+    }else{
+        console.log("response is failed")
+        productsContainer.innerHTML = '<h1>Error...</h1>'
+    }
+
+    const data = await response.json()
+    console.log(data)
+
+  productsContainer.innerHTML += data.map((product) => {
+    return `<article class="product-card">
+  <div class="product-image">
+    <img src=${product.image} alt=${product.title}>
+  </div>
+
+  <div class="product-content">
+    <span class="product-category">${product.category}</span>
+    <h2 class="product-title">${product.title}</h2>
+    
+    <div class="product-rating">
+      <span class="stars">★ ${product.rating.rate}</span>
+      <span class="count">(${product.rating.count} reviews)</span>
+    </div>
+
+    <p class="product-description">
+      ${product.description}
+    </p>
+
+    <div class="product-footer">
+      <span class="product-price">$${product.price}</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</article>`
+    })
+}
+
+fetchData()

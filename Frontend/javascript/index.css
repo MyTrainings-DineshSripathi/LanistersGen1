@@ -1,0 +1,171 @@
+.product-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-category {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  /* Truncate title to 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  background: #f1c40f;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.count {
+  font-size: 0.85rem;
+  color: #b2bec3;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #636e72;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  /* Truncate description to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #2d3436;
+}
+
+.add-to-cart {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-to-cart:hover {
+  background: #074b81;
+}
+
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    gap : 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+.shimmer {
+  /* Creates the "light streak" effect */
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Skeleton Specific Shapes */
+.skeleton .product-image {
+  background-color: #eff1f3;
+  border-bottom: 1px solid #eee;
+}
+
+.skeleton-text {
+  height: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  background-color: #eff1f3;
+}
+
+.skeleton-text.category { width: 30%; height: 10px; }
+.skeleton-text.title { width: 90%; height: 18px; }
+.skeleton-text.title-short { width: 50%; height: 18px; }
+.skeleton-text.description { width: 100%; }
+
+.skeleton-text.price { width: 60px; height: 24px; }
+.skeleton-button { 
+  width: 100px; 
+  height: 38px; 
+  border-radius: 6px; 
+}
