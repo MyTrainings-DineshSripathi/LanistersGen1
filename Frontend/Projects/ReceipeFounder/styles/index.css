@@ -1,127 +1,209 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-  /* Core Brand Colors */
-  --primary-saffron: #FF7043;    /* Appetite & Energy */
-  --secondary-sage: #4CAF50;     /* Freshness & Health */
-  --accent-gold: #FFB300;        /* Highlights & Ratings */
+  /* Brand Colors */
+  --primary: #E85D04;          /* Deep warm orange */
+  --primary-dark: #C2410C;
+  --secondary: #588157;        /* Organic green */
+  --accent: #F4A261;           /* Soft highlight */
 
-  /* Neutral Surface Colors */
-  --bg-cream: #FDFBF7;           /* Main Background (Anti-Glare) */
-  --surface-white: #FFFFFF;      /* Card & Content Backgrounds */
-  --border-stone: #E0D7D0;       /* Subtle Dividers */
+  /* Neutrals */
+  --bg-main: #FAF7F2;
+  --bg-surface: #FFFFFF;
+  --bg-dark: #1F1F1F;
 
-  /* Typography Colors */
-  --text-charcoal: #2D2926;      /* Primary Reading Text */
-  --text-muted: #6B6661;         /* Descriptions & Metadata */
+  --text-primary: #1E1E1E;
+  --text-muted: #6B7280;
+  --border-light: #E5E7EB;
 
-  /* Functional Spacing Root */
-  --radius-sm: 4px;
-  --radius-md: 12px;             /* For modern, friendly card corners */
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
 
-  /* font used for headers */
-  --font-headers : font-family: "Playfair Display", serif;
-  /* font used for text */
-  --font-text : font-family: "Source Sans 3", sans-serif;
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.06);
+  --shadow-hover: 0 14px 40px rgba(0,0,0,0.12);
 }
 
-body{
-    background-color: var(--bg-cream);
-    margin: 0px;
-    font-family: var(--font-text);
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
-body h1,
-body h2{
-    font-family: var(--font-headers);
+main {
+  width: 1200px;
+  max-width: 92%;
+  margin: auto;
 }
 
-main{
-    margin-top: 10px;
-}
+
 
 /* Hero Section */
 .hero-section {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 80px 0;
-  gap: 50px;
+  justify-content: space-between;
+  padding: 40px 0;
+  gap: 80px;
 }
 
 .hero-description h2 {
-  font-family: var(--font-header);
-  font-size: 3.5rem;
-  line-height: 1.1;
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
   margin-bottom: 20px;
 }
 
 .hero-description p {
-  font-size: 1.1rem;
-  color: var(--text-charcoal);
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 520px;
   margin-bottom: 30px;
-  max-width: 500px;
 }
 
 .cta-button {
-  display: inline-block;
-  background: var(--primary-saffron);
-  color: var(--surface-white);
+  background: var(--primary);
+  color: white;
   padding: 16px 32px;
   border-radius: var(--radius-md);
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-soft);
+  transition: 0.3s ease;
 }
 
 .cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(255, 112, 67, 0.3);
+  background: var(--primary-dark);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .hero-image-container img {
-  width: 100%;
-  max-width: 550px;
-  border-radius: 30px; /* Modern "Squircle" look */
+  max-width: 520px;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
 }
 
-/* Newsletter Section */
-.news-letter {
-  background: #2D2926; /* Dark contrast section */
-  color: var(--surface-white);
-  padding: 60px;
-  border-radius: 24px;
-  text-align: center;
-  margin: 80px 0;
+/* categories section */
+.popular-recipes {
+  margin-top: 60px;
 }
 
-.news-letter h2 { 
-    font-family: var(--font-header); 
-    margin-bottom: 10px; 
+.popular-recipes h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#categories-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  gap : 20px;
+}
+
+
+/* category card design */
+.category-container{
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover),0px 0px 10px var(--primary);
+}
+
+.category-container .image-container{
+  height: 100px;
+}
+
+.category-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* newletter design */
+.news-letter {
+  margin: 100px 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 80px 40px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: white;
+}
+
+.news-letter h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.news-letter p {
+  opacity: 0.9;
+  margin-bottom: 30px;
 }
 
 .newsletter-form {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .newsletter-form input {
-  padding: 15px 25px;
+  padding: 16px 25px;
   border-radius: var(--radius-md);
   border: none;
-  width: 300px;
+  width: 320px;
+  font-size: 1rem;
 }
 
 .newsletter-form button {
-  padding: 15px 30px;
-  background: var(--secondary-sage);
-  color: var(--surface-white);
-  border: none;
+  padding: 16px 30px;
   border-radius: var(--radius-md);
+  border: none;
+  background: white;
+  color: var(--primary);
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-3px);
+}
+
+
+/* media queries */
+@media (max-width: 900px) {
+
+  header {
+    padding: 20px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image-container img {
+    max-width: 100%;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
 }

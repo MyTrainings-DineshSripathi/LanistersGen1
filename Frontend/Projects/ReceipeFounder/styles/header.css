@@ -1,34 +1,48 @@
 /* importing index.css for root or variable use */
 @import url('./index.css');
 
-
-header{
-    background: var(--surface-white);
-    color : var(--primary-saffron);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: fixed;
-    left : 0;
-    right: 0;
-    top : 0;
-    height: 40px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  background: var(--bg-surface);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header nav ul{
-    list-style: none;
-    display: flex;
-    gap : 20px;
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
 }
 
-header nav li a{
-    text-decoration: none;
-    color : inherit;
-    font-size: 1.2rem;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-header .logo{
-    font-size: 1.4rem;
-    font-family: var(--font-headers);
+nav a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav li:last-child a {
+  background: var(--primary);
+  color: white;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
 }
