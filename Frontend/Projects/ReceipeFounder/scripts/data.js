@@ -54,10 +54,25 @@ export const FETCH_CATEGORIES = async () => {
     try{
         const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
         const data = await response.json()
-        console.log(data)
+        // console.log(data)
         return data.categories
     }catch(error){
         console.error("Unexpected error occured", error)
+    }finally{
+        console.log("-------------Fetch categories----------")
     }
 }
 
+export const FETCH_RECIPES_BY_CATEGORY = async (category) => {
+    try{
+        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+        const data = await response.json()
+        // console.log(data.meals)
+
+        return data.meals
+    }catch(error){
+        console.error("Unexpected error occured", error)
+    }finally{
+        console.log("-------------Fetch recipes based on category----------")
+    }
+}

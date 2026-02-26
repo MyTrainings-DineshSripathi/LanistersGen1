@@ -106,6 +106,7 @@ main {
 
 
 /* category card design */
+.recipe-container,
 .category-container{
   background: var(--bg-surface);
   border-radius: var(--radius-md);
@@ -119,15 +120,18 @@ main {
   cursor: pointer;
 }
 
+.recipe-container:hover,
 .category-container:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-hover),0px 0px 10px var(--primary);
 }
 
+.recipe-container .image-container,
 .category-container .image-container{
   height: 100px;
 }
 
+.recipe-container img,
 .category-container img{
   width: 100%;
   height: 100%;

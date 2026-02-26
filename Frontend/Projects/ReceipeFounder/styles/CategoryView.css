@@ -1,0 +1,36 @@
+
+/* ===== Section Layout ===== */
+
+section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+/* ===== Header Area ===== */
+
+.title-container {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.title-container .title {
+  color: var(--primary);
+}
+
+.count-container {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* ===== Recipes Grid ===== */
+
+.recipes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: 270px;
+  gap: 30px;
+}

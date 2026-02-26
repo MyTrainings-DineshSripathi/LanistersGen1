@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" href="./styles/CategoryView.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/loader.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Receipe Founder</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- loader -->
+        <section id="loader">
+            <span class="loader"></span>
+        </section>
+
+        <!-- grid -- recipes -->
+        <section>
+            <div>
+                <div class="title-container">
+                    Recipes for category : <span class="title"></span>
+                </div>
+                <div class="count-container">
+                    Total recipes : <span class="count">0</span>
+                </div>
+            </div>
+            <div class="recipes-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Receipe Founder. All rights reserved.</p>
+    </footer>
+</body>
+<script type="module" src="./scripts/CategoryView.js"></script>
+</html>
