@@ -1,0 +1,155 @@
+/* ============================= */
+/* ===== RECIPE DETAIL ======== */
+/* ============================= */
+
+.recipe-detail {
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  background: var(--bg-main);
+}
+
+/* ===== HEADER ===== */
+
+.recipe-header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.recipe-image {
+  width: 300px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.recipe-meta h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.area {
+  background: var(--secondary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+
+.tag {
+  background: var(--accent);
+  color: white;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+
+/* ===== CARDS ===== */
+
+.ingredients-card,
+.instructions-card,
+.video-card {
+  background: var(--bg-surface);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  margin-top: 40px;
+}
+
+.ingredients-card h2,
+.instructions-card h2,
+.video-card h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+/* ===== INGREDIENTS ===== */
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 15px;
+}
+
+.ingredient-name {
+  font-weight: 600;
+}
+
+.ingredient-measure {
+  color: var(--text-muted);
+}
+
+/* ===== INSTRUCTIONS ===== */
+
+.instruction-step {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.step-number {
+  min-width: 32px;
+  height: 32px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instruction-step p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== VIDEO ===== */
+
+.video-card a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.video-card a:hover {
+  background: var(--primary-dark);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+  .recipe-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .recipe-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}

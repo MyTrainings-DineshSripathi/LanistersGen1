@@ -9,7 +9,7 @@ import { FETCH_CATEGORIES } from "./data.js";
 const categoriesContainer = document.getElementById('categories-container')
 
 // selecting the loader element from the DOM
-const Loader = document.getElementById('loader')
+export const Loader = document.getElementById('loader')
 
 window.addEventListener('load', () => {
     Loader.style.display = "flex";

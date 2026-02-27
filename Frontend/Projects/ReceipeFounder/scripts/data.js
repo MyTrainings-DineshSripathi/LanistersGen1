@@ -76,3 +76,15 @@ export const FETCH_RECIPES_BY_CATEGORY = async (category) => {
         console.log("-------------Fetch recipes based on category----------")
     }
 }
+
+export const FETCH_RECIPE_BY_ID = async (id) => {
+    try{
+        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+        const data = await response.json()
+        return data.meals[0]
+    }catch(error){
+        console.error("Unexpected error occured", error)
+    }finally{
+        console.log("-------------Fetch recipe based on id----------")
+    }
+}

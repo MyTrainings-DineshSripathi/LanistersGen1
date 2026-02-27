@@ -36,7 +36,7 @@ async function getRecipesBasedOnCategory(){
 function displayRecipes(recipes){
     recipes.forEach((recipe) => {
         recipesContainer.innerHTML += getCard(recipe, {
-            action : `window.location.href='./CategoryView.html?id=${recipe.idMeal}'`,
+            action : `window.location.href='./RecipeViewer.html?id=${recipe.idMeal}'`,
             name : 'recipe'
         })
     })
