@@ -1,0 +1,147 @@
+/* CENTER FORM */
+.login-section{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* FORM CARD */
+.login-form{
+  width:100%;
+  max-width:420px;
+  background:var(--bg-surface);
+  padding:40px;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-soft);
+  transition:0.3s;
+}
+
+.login-form:hover{
+  box-shadow:var(--shadow-hover);
+}
+
+/* TITLE */
+
+.form-title{
+  font-family:"Playfair Display", serif;
+  font-size:28px;
+  text-align:center;
+  color:var(--text-primary);
+}
+
+/* FORM GROUP */
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:18px;
+}
+
+.form-group label{
+  font-size:14px;
+  margin-bottom:6px;
+  color:var(--text-muted);
+}
+
+/* INPUT */
+
+.form-group input{
+  padding:12px 14px;
+  border-radius:var(--radius-sm);
+  border:1px solid var(--border-light);
+  font-size:15px;
+  transition:0.25s;
+}
+
+.form-group input:focus{
+  outline:none;
+  border-color:var(--primary);
+  box-shadow:0 0 0 2px rgba(232,93,4,0.15);
+}
+
+.form-group-options{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* FORGOT PASSWORD */
+
+.forgot{
+  text-align:right;
+  margin-bottom:20px;
+}
+
+.forgot a{
+  text-decoration:none;
+  color:var(--secondary);
+}
+
+.forgot a:hover{
+  text-decoration:underline;
+}
+
+/* BUTTON GROUP */
+
+.btn-group{
+  display:flex;
+  gap:12px;
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:var(--radius-md);
+  background:var(--primary);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.25s;
+}
+
+.btn-primary:hover{
+  background:var(--primary-dark);
+}
+
+/* SECONDARY BUTTON */
+
+.btn-secondary{
+  flex:1;
+  padding:12px;
+  border-radius:var(--radius-md);
+  border:1px solid var(--border-light);
+  background:white;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.btn-secondary:hover{
+  background:#f3f3f3;
+}
+
+.error{
+    color : red;
+}
+
+.success{
+    color : green;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:480px){
+
+.login-form{
+  padding:30px 24px;
+}
+
+.btn-group{
+  flex-direction:column;
+}
+
+}
