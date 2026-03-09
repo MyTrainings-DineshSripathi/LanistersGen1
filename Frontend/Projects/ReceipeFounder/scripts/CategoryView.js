@@ -1,5 +1,5 @@
 import { FETCH_RECIPES_BY_CATEGORY } from "./data.js";
-import { getCard } from "./index.js";
+import { getCard } from "./UIBlocks.js";
 
 // getting the category from the url params
 const urlParams = new URLSearchParams(window.location.search)
