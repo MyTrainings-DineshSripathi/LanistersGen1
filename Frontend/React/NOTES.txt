@@ -1,0 +1,14 @@
+-- create a project in react 
+    -- cmd to create new project
+        -- npm create vite@latest
+
+-- dependency : a software which helps the application to run.
+    1. dependencies 
+        -- helps the application to run in development stage and the production stage.
+    2. dev dependencies
+        -- helps the application to run in development stage.
+
+-- To run an application we have to use a command "npm run dev"
+-- It will provide a url for us. copy and paste it inside the browser. 
+
+-- jsx -- javascript + XML 
