@@ -12,3 +12,26 @@
 -- It will provide a url for us. copy and paste it inside the browser. 
 
 -- jsx -- javascript + XML 
+
+-- index.html <--- place content
+
+-- load -- render
+
+-- ROOT : location in our html page which will holds the rendered content in the webpage.
+-- To create Root we are using createRoot(element)
+
+-- DOM : we select the elements in html page inside the js file. document.querySelector(), getElementById
+
+-- component : If we are having an HTML then we call it as a component.
+
+-- To call a component we use ComponentName as a tag name. 
+    <ComponentName />
+        (or)
+    <ComponentName></ComponentName>
+
+-- Component can't return mutliple tags at a time. so return multiple elements we wrap it with in a tag and return as a single element.
+-- When we are returning the elements which are wrapped inside another element. They both are child to the wrapped element, but if you want to have both the child elements act as individual elements without the parent element then we have to use jsx fragment.
+
+jsx frament -- <></> -- dummy tag which will be ignored by the browser when rendering the elements so that when we are returning the elements we are going to wrap it inside the jsx fargment hence we are returning only one element as per jsx but when rendering the elements the browser will ignore the fargment and only considers the child elements.
+
+
