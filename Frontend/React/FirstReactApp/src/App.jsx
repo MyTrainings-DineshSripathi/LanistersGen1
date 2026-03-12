@@ -1,8 +1,10 @@
 import './App.css'
 
 import Slide1 from './assets/slide-01.jpg'
+import CategoryViewer from './UIBlocks/CategoryViewer/CategoryViewer'
 
 function App() {
+  const a = [<p>Para1</p>, <p>Para2</p>, <p>Para3</p>, <p>Para4</p>]
   return (
     <>
       <header>
@@ -36,6 +38,26 @@ function App() {
               <a href="">Shop Now</a>
             </div>
           </div>
+        </section>
+        <section>
+          {a}
+        </section>
+        <section className="categories-container">
+          <CategoryViewer 
+            title = "Women"
+            subTitle = "Spring 2026"
+            image = "https://themewagon.github.io/cozastore/images/banner-01.jpg"
+          />
+          <CategoryViewer 
+            title = "Men"
+            subTitle = "Spring 2026"
+            image = "https://themewagon.github.io/cozastore/images/banner-02.jpg"
+          />
+          <CategoryViewer 
+            title = "Accessories"
+            subTitle = "New Trend"
+            image = "https://themewagon.github.io/cozastore/images/banner-03.jpg"
+          />
         </section>
       </main>
     </>

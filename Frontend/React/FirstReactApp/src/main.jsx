@@ -6,6 +6,8 @@ import App from './App.jsx'
 /* 
   document.getElementById('root') -- we are selecting a element with an id root
   createRoot -- with this function we are declaring that the selected element as the root to render all the content
+
+  https://themewagon.github.io/cozastore/
 */
 createRoot(document.getElementById('root')).render(
   <StrictMode>

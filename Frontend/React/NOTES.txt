@@ -33,5 +33,26 @@
 -- When we are returning the elements which are wrapped inside another element. They both are child to the wrapped element, but if you want to have both the child elements act as individual elements without the parent element then we have to use jsx fragment.
 
 jsx frament -- <></> -- dummy tag which will be ignored by the browser when rendering the elements so that when we are returning the elements we are going to wrap it inside the jsx fargment hence we are returning only one element as per jsx but when rendering the elements the browser will ignore the fargment and only considers the child elements.
+------------------------------------------------------------------------------------------------------------
 
+PROPS : 
+-- To pass information from one component to another component we have to use props (property)
+-- Whatever the information we are passing to a component will always be recieved as object.
+-- The information that you want to pass to a component will be sent as a attribute.
 
+<Component 
+    key1 = "value1"
+    key2 = "value2"
+/>
+
+{
+    key1 : "value1",
+    key2 : "value2"
+}
+
+function Component(para){
+
+}
+
+accessing the prop : 
+para.key1
