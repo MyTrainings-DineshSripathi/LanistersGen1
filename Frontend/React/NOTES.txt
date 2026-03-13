@@ -56,3 +56,65 @@ function Component(para){
 
 accessing the prop : 
 para.key1
+
+------------------------------------------------------------------
+
+Handling arrays in React js.
+
+react having special feature to display the arrays directly for example 
+
+const a = ["data1","data2","data3","data4"]
+
+return <div>
+    {a}
+</div>
+
+output : 
+data1data2data3data4
+
+We can use array methods such as filter, map to include the tags to the data.
+
+
+a.map() --- it will generate a duplicate array
+
+a.map((item) => {
+    return <p>{item}</p>
+})
+
+// the above operation will return an array of paragraph elements with the data.
+
+------------------------------------------------------------------------------------
+
+state : 
+
+when we load the content on DOM then react it going have a copy on virtual DOM.
+
+State Management Hooks (function) : 
+We use this hook to manage the state if a variable.
+
+1. useState()
+    -- whenever we use the useState() it will return an array with two values inside it. the array looks as shown below.
+
+    sample : 
+        useState() ---> return [initValue, functionToChangeTheValue]
+
+    -- We will use array destructing to separate the data and function
+        syntax : 
+            const [variableName, setVariableName] =  useState(initialValue)
+
+            -- it will store the initValue inside variableName
+            -- it wil store the initValue changing function inside setVariableName
+    -- It will re-render the entire component whenever there is a change in it's state.
+
+2. useRef()
+    -- Also a state management hook but unlike useState it will not return an array to us. Instead we are going to get an object with a key current
+    sample : 
+        {current : initvalue}
+    -- Whenever you want to update the value of a useRef we have to use the below approach
+
+        syntax : 
+            const variable = useRef(initValue); //variable going to hold the object with key current which is holding the initValue. 
+
+            variable.current = updatedValue.
+
+    -- useRef is not capable of re-rendering the component. Instead of re-rendering the component what it will do is to update the value and keep a track of it and when the component re-renders then it is going update the state.

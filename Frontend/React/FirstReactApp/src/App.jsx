@@ -2,11 +2,13 @@ import './App.css'
 
 import Slide1 from './assets/slide-01.jpg'
 import CategoryViewer from './UIBlocks/CategoryViewer/CategoryViewer'
+import DummyComponent from './UIBlocks/DummyComponent/DummyComponent'
 
 function App() {
-  const a = [<p>Para1</p>, <p>Para2</p>, <p>Para3</p>, <p>Para4</p>]
+  
   return (
     <>
+      <DummyComponent></DummyComponent>
       <header>
         <div className='logo'>
           Cozy Store
@@ -38,9 +40,6 @@ function App() {
               <a href="">Shop Now</a>
             </div>
           </div>
-        </section>
-        <section>
-          {a}
         </section>
         <section className="categories-container">
           <CategoryViewer 
