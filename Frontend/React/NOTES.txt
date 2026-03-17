@@ -118,3 +118,72 @@ We use this hook to manage the state if a variable.
             variable.current = updatedValue.
 
     -- useRef is not capable of re-rendering the component. Instead of re-rendering the component what it will do is to update the value and keep a track of it and when the component re-renders then it is going update the state.
+
+
+    3. useEffect()
+        -- is a hook that will perform a certain operation, whenever we are rendering a component and if that component is having useEffect hook then it will perform the given task.
+
+        render component --> useEffect 
+
+        -- We can restrict when we want the useEffect to work. 
+
+        syntax : 
+            useEffect(callbackFun, [dependencyArray,....])
+        
+        3 types : 
+
+        1. useEffect(callbackFun)
+            -- will always execute the callBackFunction when ever we are rendering the component.
+        
+        2. useEffect(callbackFun, [])
+            -- will execute only at the initial rendering. 
+        
+        3. useEffect(callBackFun, [variable])
+            -- This useEffect will execute only when the given variable state changes.
+
+------------------------------------------------------------------------------------------------------------------
+
+API : application program interface 
+
+-- use async and await function to handle the async code due to api calling.
+
+syntax : 
+    async function functionName(){
+
+    }
+
+-- we can use fetch function.
+    syntax : 
+        fetch(url, headers (optional)) -- will call the data and receives response
+        
+    -- manually convert the response to object format
+
+-- we can use axios 
+    syntax : 
+        axios.methodType(url, body(optional))
+    
+    -- automatically converts the response to object format.
+
+-- axios is a 3rd party lib. To install axios we have to run a command "npm install axios"
+
+---------------------------------------------------------
+Navigation : 
+-- we use react-router to navigate between pages.
+-- we have to install the react-router and react-router-dom 
+syntax : 
+    npm install react-router 
+    npm install react-router-dom 
+
+steps to implement the navigation.
+1. install the dependencies. 
+2. Routes Component -- path that will map with the element so that whenever user hits the endpoint path then react-router will render the given component on the webpage.
+syntax : 
+    <Routes>
+        ...paths
+    </Routes>
+3. To define the path we need to use the Route component--  you have to pass path value and element value.
+syntax : 
+    <Route path=""  element={<Component/>}/>
+4. Here we can navigate between one element to another and also we can render one component inside another component.
+5. Where ever you want the navigation to work we are going to wrap the entire main component within the BrowserRouter component.
+

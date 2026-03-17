@@ -2,7 +2,7 @@ import React from 'react'
 import './CategoryViewer.css'
 
 function CategoryViewer({title, subTitle, image}) {
-    console.log(title)
+    // console.log(title)
   return (
     <div style={{
         backgroundImage: `url('${image}')`

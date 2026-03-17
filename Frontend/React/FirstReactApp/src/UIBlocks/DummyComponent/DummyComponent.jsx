@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 function DummyComponent() {
     // let number = 0
@@ -8,6 +8,17 @@ function DummyComponent() {
     const ghostNumber = useRef(0)
     // console.log(useRef())
 
+    useEffect(() => {
+        console.log("use Effect function is executed....")
+    })
+
+    useEffect(() => {
+        console.log("use Effect hook with empty dependency array is executed....")
+    }, [])
+
+    useEffect(() => {
+        console.log("use effect hook with the dependency array of number")
+    }, [ghostNumber.current])
 
 
     const increaseBtn = () => {
