@@ -2,6 +2,11 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import {BrowserRouter, Route, Routes } from 'react-router'
+import Products from './UIBlocks/ProductsPage/Products.jsx'
+import Header from './UIBlocks/HeaderComponent/Header.jsx'
+import NotFoundPage from './UIBlocks/NotFoundComponent/NotFoundPage.jsx'
+
 
 /* 
   document.getElementById('root') -- we are selecting a element with an id root
@@ -12,6 +17,13 @@ import App from './App.jsx'
 */
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <Header></Header>
+      <Routes>
+        <Route path='' element={<App />}></Route>
+        <Route path='/product' element={<Products />}></Route>
+        <Route path='*' element={<NotFoundPage />}></Route>
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )
