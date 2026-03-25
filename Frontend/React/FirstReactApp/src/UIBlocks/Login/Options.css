@@ -1,0 +1,80 @@
+/* Options.css */
+
+.auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    padding: 40px 20px;
+}
+
+.auth-wrapper
+.options-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-wrapper
+.options-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1px; /* Overlap the border of the content below */
+    gap: 20px;
+}
+
+.auth-wrapper
+.tab-item {
+    font-family: var(--font-main);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 5px;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.auth-wrapper
+.tab-item:hover {
+    color: var(--text-dark);
+}
+
+/* The Active State Indicator */
+.auth-wrapper
+.tab-item.active {
+    color: var(--text-dark);
+}
+
+.auth-wrapper
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.auth-wrapper
+.divider {
+    color: var(--border-color);
+    font-size: 18px;
+    user-select: none;
+}
+
+.auth-wrapper
+.auth-content {
+    /* Since Login and Register already have padding/borders, 
+       we ensure they blend into this layout */
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

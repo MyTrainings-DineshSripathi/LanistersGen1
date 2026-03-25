@@ -1,0 +1,114 @@
+/* Register.css */
+
+/* main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    font-family: var(--font-medium);
+    padding: 20px;
+} */
+
+.register-container {
+    background: var(--text-white);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.register-form h1 {
+    font-family: var(--font-main);
+    font-size: 30px;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-medium);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    font-family: var(--font-medium);
+    font-size: 15px;
+    color: var(--text-dark);
+    transition: all var(--transition-speed);
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.register-btn {
+    width: 100%;
+    height: 46px;
+    background-color: var(--primary-hover); /* Signature dark style */
+    color: var(--text-white);
+    border: none;
+    border-radius: 23px; /* Pill shape */
+    font-family: var(--font-medium);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    margin-top: 15px;
+}
+
+.register-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.login-link {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+.login-link a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.error{
+    color : red;
+}
+
+.success{
+    color : green;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 30px 20px;
+    }
+}

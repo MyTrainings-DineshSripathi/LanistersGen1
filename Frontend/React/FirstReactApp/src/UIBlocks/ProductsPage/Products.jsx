@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router'
 
 function Products() {
     const [products, setProducts] = useState([])
+    const [searchText, setSearchText] = useState("")
 
   const FETCH_PRODUCTS = async () => {
     const response  = await axios.get('https://dummyjson.com/products?limit=12')
@@ -15,6 +17,10 @@ function Products() {
     //complete
   }
 
+  const searchTextHandler = (e) => {
+    setSearchText(e.target.value.toLowerCase())
+  }
+
   useEffect(() => {
     FETCH_PRODUCTS()
   }, [])
@@ -22,12 +28,19 @@ function Products() {
     <>
         <section className='products-section'>
             <div className="title-container">
-                <h2>Products</h2>
-                <p>Explore our collection</p>
+                <div className='title'>
+                    <h2>Products</h2>
+                    <p>Explore our collection</p>
+                </div>
+                <div className="filter-container">
+                    <input type="text" name="search" id="search" placeholder='name or category' onChange={searchTextHandler} />
+                </div>
             </div>
             <div className="products-container">
-                {(products.length > 0)? products.map((product) => (
-                <div key={product.id} className="container">
+                {(products.length > 0)? products
+                .filter((product) => product.title.toLowerCase().includes(searchText) || product.category.toLowerCase().includes(searchText))
+                .map((product) => (
+                <NavLink to={`/product/${product.id}`} key={product.id} className="container">
                     <div className="image-container">
                     <img src={product.thumbnail} alt={product.title}/>
 
@@ -44,7 +57,7 @@ function Products() {
                         <button>Shop now</button>
                     </div>
                     </div>
-                </div>
+                </NavLink>
                 )) : <p>Loading....</p>}
             </div>
             <button className="load-more">Load more</button>

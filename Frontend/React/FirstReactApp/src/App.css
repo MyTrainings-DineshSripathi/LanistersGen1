@@ -169,6 +169,7 @@ nav {
   font-family: var(--font-medium);
   transition: transform var(--transition-speed);
   overflow: hidden;
+  text-decoration: none;
 }
 
 /* Image Wrapper */
@@ -218,6 +219,33 @@ nav {
   justify-content: space-around;
   flex-wrap: wrap;
   gap : 20px;
+}
+
+.products-section .title-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.products-section .title{
+  flex : 1;
+}
+
+.products-section .filter-container{
+  flex : 1;
+  display: flex;
+  justify-content: end;
+}
+
+.filter-container input {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    font-family: var(--font-medium);
+    font-size: 15px;
+    color: var(--text-dark);
+    transition: all var(--transition-speed);
+    outline: none;
 }
 
 /* Info Section */

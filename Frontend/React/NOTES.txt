@@ -186,4 +186,27 @@ syntax :
     <Route path=""  element={<Component/>}/>
 4. Here we can navigate between one element to another and also we can render one component inside another component.
 5. Where ever you want the navigation to work we are going to wrap the entire main component within the BrowserRouter component.
+----------------------------------------------------------
 
+Form handling : 
+    -- validating forms.
+    -- traditional form handling : 
+        -- we have to manually stop the form submission -- preventDefault
+        -- we have to read the data from the input fields seperate and then we have to store them inside an object.
+        -- we have to validate them with the help of REGEX. 
+        -- We have to track the manually and need to display them. 
+
+    -- React Hook Form :
+        -- it is a library which is used to handle the forms.
+        -- we have to install it -- npm install react-hook-form
+        -- we have to use a hook -- useForm()
+        -- useForm() hook will provide some options which can be used to handle the forms -->  object.
+            -- register -- registers the input field so that it will collect the values of those input fields
+                syntax : 
+                    register('name', {
+                        options (required, validation, pattern)
+                    })
+            -- errors -- collects the errors 
+            -- handleSubmit -- needs a callback function to send the collected data from the input fields and also it prevents the form submission.
+
+-----------------------------------------------------------------------------------------------------

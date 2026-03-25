@@ -67,50 +67,6 @@ function App() {
         </section>
         <Products></Products>
       </main>
-      <footer>
-        <div className="menu-container">
-          <div className="title">Categories</div>
-          <div className="options">
-            <a href="">Women</a>
-            <a href="">Men</a>
-            <a href="">Beauty</a>
-            <a href="">Furniture</a>
-            <a href="">Groceries</a>
-          </div>
-        </div>
-        <div className="menu-container">
-          <div className="title">Help</div>
-          <div className="options">
-            <a href="">Track Order</a>
-            <a href="">Returns</a>
-            <a href="">Shipping</a>
-            <a href="">FAQs</a>
-          </div>
-        </div>
-        <div className="menu-container">
-          <div className="title">Get in touch</div>
-          <div className="options">
-            <div className="address">
-              Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-            </div>
-            <div className="social-media">
-              <a href="">facebook</a>
-              <a href="">instagram</a>
-              <a href="">twitter</a>
-            </div>
-          </div>
-        </div>
-        <div className="menu-container">
-          <div className="title">NEWSLETTER</div>
-          <form className="option">
-            <input type="email" name="email" id="email" />
-            <button>Subscribe</button>
-          </form>
-        </div>
-        <div className="copy-right">
-          Copyright ©2026 All rights reserved 
-        </div>
-      </footer>
     </>
   )
 }

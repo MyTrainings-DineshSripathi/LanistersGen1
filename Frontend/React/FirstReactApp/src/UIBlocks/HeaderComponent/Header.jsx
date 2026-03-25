@@ -19,6 +19,7 @@ function Header() {
           <button className='nav-link'>search</button>
           <button className='nav-link'>cart</button>
           <button className='nav-link'>wishlist</button>
+          <NavLink to={'/user/login'}>Login</NavLink>
         </div>
     </header>
   )
