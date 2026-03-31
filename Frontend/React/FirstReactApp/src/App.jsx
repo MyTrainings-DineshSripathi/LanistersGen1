@@ -10,13 +10,13 @@ import Products from './UIBlocks/ProductsPage/Products'
 
 function App() {
 
-  const [products, setProducts] = useState([])
+  // const [products, setProducts] = useState([])
 
-  const FETCH_PRODUCTS = async () => {
-    const response  = await axios.get('https://dummyjson.com/products?limit=12')
-    console.log(response)
-    setProducts(response.data.products)
-  }
+  // const FETCH_PRODUCTS = async () => {
+  //   const response  = await axios.get('https://dummyjson.com/products?limit=194')
+  //   console.log(response)
+  //   setProducts(response.data.products)
+  // }
 
   // https://dummyjson.com/products?skip=30&limit=12
   const FETCH_REST_OF_PRODUCTS = async () => {
@@ -24,7 +24,7 @@ function App() {
   }
 
   useEffect(() => {
-    FETCH_PRODUCTS()
+    // FETCH_PRODUCTS()
   }, [])
 
   // useEffect(() => {

@@ -210,3 +210,6 @@ Form handling :
             -- handleSubmit -- needs a callback function to send the collected data from the input fields and also it prevents the form submission.
 
 -----------------------------------------------------------------------------------------------------
+Context API : 
+    -- location which can be accessed by all the permitted components.
+    -- Here we will place the data which is used by multiple components. In order to aviod prop drilling

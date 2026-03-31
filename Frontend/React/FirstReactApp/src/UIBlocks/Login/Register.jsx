@@ -14,8 +14,8 @@ function Register() {
 
     console.log(errors)
   return (
-    <main>
-        <div className="register-container">
+    <>
+        <section className="register-container">
             <form onSubmit={handleSubmit(formHandler)} className="register-form">
                 <h1>Create Account</h1>
                 
@@ -71,8 +71,8 @@ function Register() {
                     Already have an account? <a href="/login">Login here</a>
                 </p>
             </form>
-        </div>
-    </main>
+        </section>
+    </>
   );
 }
 

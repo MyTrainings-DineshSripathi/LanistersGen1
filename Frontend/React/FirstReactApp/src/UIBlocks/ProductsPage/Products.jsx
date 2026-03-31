@@ -1,16 +1,18 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router'
+import { ContextData } from '../ContextAPI/Context'
 
 function Products() {
-    const [products, setProducts] = useState([])
+    const {products, FETCH_PRODUCTS} = useContext(ContextData)
+    // const [products, setProducts] = useState([])
     const [searchText, setSearchText] = useState("")
 
-  const FETCH_PRODUCTS = async () => {
-    const response  = await axios.get('https://dummyjson.com/products?limit=12')
-    console.log(response)
-    setProducts(response.data.products)
-  }
+//   const FETCH_PRODUCTS = async () => {
+//     const response  = await axios.get('https://dummyjson.com/products?limit=12')
+//     console.log(response)
+//     setProducts(response.data.products)
+//   }
 
   // https://dummyjson.com/products?skip=30&limit=12
   const FETCH_REST_OF_PRODUCTS = async () => {

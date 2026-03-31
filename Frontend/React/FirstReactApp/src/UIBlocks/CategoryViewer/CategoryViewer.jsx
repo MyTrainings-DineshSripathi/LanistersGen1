@@ -1,5 +1,6 @@
 import React from 'react'
 import './CategoryViewer.css'
+import { NavLink } from 'react-router'
 
 function CategoryViewer({title, subTitle, image}) {
     // console.log(title)
@@ -13,9 +14,9 @@ function CategoryViewer({title, subTitle, image}) {
         <div className="sub-title">
             {subTitle}
         </div>
-        <a href='' className="cover-container">
+        <NavLink to='' className="cover-container">
             Shop now
-        </a>
+        </NavLink>
     </div>
   )
 }
