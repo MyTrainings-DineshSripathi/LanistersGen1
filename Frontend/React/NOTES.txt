@@ -213,3 +213,116 @@ Form handling :
 Context API : 
     -- location which can be accessed by all the permitted components.
     -- Here we will place the data which is used by multiple components. In order to aviod prop drilling
+    -- To implement context api 
+    -- 1. we have to create a jsx file. -- context component
+    -- 2. We have to import the createContext() hook using it declare a context api 
+    -- 3. we have to return contextAPI.provider component 
+            ex : 
+                const contextAPI = createContext()
+
+                function ContextComponent({children}) {
+                    return (
+                        <contextAPI.provider>
+                            {children}
+                        </contextAPI>
+                    )
+                }
+
+-------------------------------------------------------
+
+useState() --> return array
+    -- [initialValue, setterFunction]
+
+    const data = useState(0)
+
+    data = [0, ()]
+
+    const [a , b] = data // [0, ()]
+
+    console.log(a) // init 
+    console.log(b) // setterFunction
+
+    how will you access the values inside an array 
+
+    let a = [1,2,3,4,5]
+
+    access 3 --> print(a[3]) //
+
+---------------------------------------------------------------------------------------
+Routing : 
+    -- moving from one page to another page. 
+
+    ex : 
+        Mumbai to Hyderabad -- Route
+
+        Mumbai -- Banglore -- Hyderabad -- Route1 
+        Mumbai -- Maharastra -- Hyderabad -- Route2 
+        Mumbai -- Maharastra -- Karanataka -- Hyderabad -- Route3
+
+    -- From one page --> another 
+        -- Define the route to the pages. 
+        -- But react is not capable of routing the pages.
+        -- To make react work with the routing -- React router 
+            -- In react router we will get
+                -- Router -- will keep the routes 
+                    Syntax : 
+                        <Router>
+                            <Routes>
+                                <Route></Route>
+                            </Routes>
+                        </Router>
+        -- We access or navigate to another page with the help of 'endpoint'
+            -- https://localhost:5036/(Base url)
+
+            Adding endpoint
+            -- https://localhost:5036/EndPoint
+                ex : 
+                    -- https://localhost:5036/contact-us (url with EndPoint)
+                                (or)
+                    -- https://localhost:5036/user/1 (url with EndPoint + Parameter)
+        -- We have to define the Route/path for each page. 
+            -- Route contains two important parts.
+                1. path -- here we define the endpoint 
+                2. element -- this will be the rendering element when user hits the endpoint.
+                    syntax : 
+                        <Route path='/endpoint' element={<ComponentName />}></Route>
+                                        (or)
+                        <Route path='/endpoint/:paraName' element={<ComponentName />}></Route>
+
+                    Example :
+                        <Route path='/contact-us' element={<Contact />}></Route>
+                                        (or)
+                        <Route path='/user/:user_id' element={<UserProfile />}></Route>
+
+        -- Link -- link is a anchor tag when it is converted to html element. 
+        -- in react instead of using anchor tag we will use Link Component to navigate from one page to another.
+            -- syntax ; 
+                <Link to='/endpoint'>text</Link>
+                    (or)
+                <NavLink to='/endpoint'>text</NavLink>
+        -- NavLink -- help you to navigate from one page to another but the active component will get a class-name active.
+        -- we have to wrap the Links and Routes inside the Router. 
+
+===============================================================================================================================================
+Drawback : 
+    -- context api can work if you are building small applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

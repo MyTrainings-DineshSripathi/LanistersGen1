@@ -3,9 +3,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, useParams } from 'react-router';
 import './Product.css'; // Don't forget to create this CSS file
 import { ContextData } from '../ContextAPI/Context';
+import { useSelector } from 'react-redux';
 
 function Product() {
-    const {products} = useContext(ContextData)
+    // const {products} = useContext(ContextData)
+    const {products} = useSelector(state => state.data)
+    
     const { productId } = useParams();
     const [product, setProduct] = useState(null); // Initialize with null for proper loading state
     const [similarProducts, setSimilarProducts] = useState([]);

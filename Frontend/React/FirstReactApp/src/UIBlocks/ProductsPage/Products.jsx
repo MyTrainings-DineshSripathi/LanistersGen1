@@ -2,17 +2,26 @@ import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router'
 import { ContextData } from '../ContextAPI/Context'
+import { useDispatch, useSelector } from 'react-redux'
+import { setProducts } from '../ReduxToolKIt/DataSlices/DataSlice'
 
 function Products() {
-    const {products, FETCH_PRODUCTS} = useContext(ContextData)
+    // const {products, FETCH_PRODUCTS} = useContext(ContextData)
+    // const products = []
+    // const FETCH_PRODUCTS = () => {
+
+    // }
+    const {products} = useSelector(state => state.data)
+    const dispatch = useDispatch()
+    console.log(products)
     // const [products, setProducts] = useState([])
     const [searchText, setSearchText] = useState("")
 
-//   const FETCH_PRODUCTS = async () => {
-//     const response  = await axios.get('https://dummyjson.com/products?limit=12')
-//     console.log(response)
-//     setProducts(response.data.products)
-//   }
+  const FETCH_PRODUCTS = async () => {
+    const response  = await axios.get('https://dummyjson.com/products?limit=12')
+    console.log(response)
+    dispatch(setProducts(response.data.products))
+  }
 
   // https://dummyjson.com/products?skip=30&limit=12
   const FETCH_REST_OF_PRODUCTS = async () => {

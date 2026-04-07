@@ -11,6 +11,8 @@ import Login from './UIBlocks/Login/Login.jsx'
 import Register from './UIBlocks/Login/Register.jsx'
 import Product from './UIBlocks/ProductsPage/Product.jsx'
 import Context from './UIBlocks/ContextAPI/Context.jsx'
+import { Provider } from 'react-redux'
+import dataStore from './UIBlocks/ReduxToolKIt/Store.jsx'
 
 
 /* 
@@ -22,12 +24,12 @@ import Context from './UIBlocks/ContextAPI/Context.jsx'
 */
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Context>
+    <Provider store={dataStore}>
       <BrowserRouter>
         <Header></Header>
         <main>
           <Routes>
-          <Route path='' element={<App />}></Route>
+            <Route path='' element={<App />}></Route>
             <Route path='/product' element={<Products />}></Route>
             <Route path='/user' element={<Options />}>
               <Route path='login' element={<Login />}></Route>
@@ -82,6 +84,6 @@ createRoot(document.getElementById('root')).render(
           </div>
         </footer>
       </BrowserRouter>
-    </Context>
+    </Provider>
   </StrictMode>,
 )
