@@ -307,6 +307,22 @@ Routing :
 Drawback : 
     -- context api can work if you are building small applications.
 
+Redux Tool kit : 
+    -- To handle the context api more efficiently. 
+    -- We will divide the context api data into slices and each slice will contain it's own data. 
+    -- redux is going to combine all those slices into a single data or object with the help of store.
+    -- To update the values inside a slice we have to use reducers(action).
+    -- The values are called as state. The state can only updated with the help of the reducers.
+    -- We will wrap the components/elements which will share the data among them with the Provider component.
+    -- To the provider component we need to use the store -- component.
+    -- Redux slices can't handle the async code. --> use asyncThunk 
+    -- asyncThunk is a hook which will be used in redux toolkit to fetch the data.
+    -- we will create extraReducers to handle the asyncthunk 
+        -- pending -- data is being fetched
+        -- fulfilled -- data was successfully fetched 
+        -- rejected -- data was failed to fetch.
+    
+
 
 
 

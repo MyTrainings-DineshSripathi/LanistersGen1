@@ -4,6 +4,7 @@ import { NavLink } from 'react-router'
 import { ContextData } from '../ContextAPI/Context'
 import { useDispatch, useSelector } from 'react-redux'
 import { setProducts } from '../ReduxToolKIt/DataSlices/DataSlice'
+import { productsThunk } from '../ReduxToolKIt/DataSlices/DataFetchingAsyncThunk'
 
 function Products() {
     // const {products, FETCH_PRODUCTS} = useContext(ContextData)
@@ -18,9 +19,8 @@ function Products() {
     const [searchText, setSearchText] = useState("")
 
   const FETCH_PRODUCTS = async () => {
-    const response  = await axios.get('https://dummyjson.com/products?limit=12')
-    console.log(response)
-    dispatch(setProducts(response.data.products))
+    await dispatch(productsThunk())
+    // dispatch(setProducts(response.data.products))
   }
 
   // https://dummyjson.com/products?skip=30&limit=12

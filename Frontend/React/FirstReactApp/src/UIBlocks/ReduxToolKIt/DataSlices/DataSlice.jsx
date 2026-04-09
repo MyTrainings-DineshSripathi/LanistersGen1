@@ -1,9 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { productsThunk } from './DataFetchingAsyncThunk'
+import Products from '../../ProductsPage/Products'
 
 const initialData = {
     products : [],
     cart : [],
     wishlist : [],
+    loading : false,
+    error : null,
 }
 
 const dataSlice = createSlice({
@@ -13,6 +17,26 @@ const dataSlice = createSlice({
         setProducts : (state, action) => {
             state.products = action.payload
         },
+    },
+    extraReducers : (builder) => {
+        builder.addCase(productsThunk.pending, (state) => {
+            console.log("loading.....")
+            state.products = []
+            state.loading = true
+            state.error = null
+        })
+        .addCase(productsThunk.fulfilled, (state, action) => {
+            console.log(action)
+            state.products = action.payload
+            state.loading = false
+            state.error = null
+        })
+        .addCase(productsThunk.rejected, (state, action) => {
+            console.log(action)
+            state.products = []
+            state.loading = false
+            state.error = action.payload
+        })
     }
 }) 
 
