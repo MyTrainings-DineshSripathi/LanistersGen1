@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
+    <style>
+        body{
+            background-color: rgb(29, 27, 27);
+            color : white;
+            font-family: monospace;
+        }
+        a{
+            text-decoration: none;
+            color : white;
+            transition: all .5s linear;
+            padding : 10px;
+        }
+        a:hover{
+            background-color: white;
+            color : rgb(19, 19, 100);
+        }
+    </style>
 </head>
 <body>
     <a href="./firstWebPage.html">home</a>
@@ -11,5 +28,25 @@
     <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, eius? Pariatur, a maiores aut quae quaerat nam quam dignissimos cum, iste quidem deserunt architecto non commodi nostrum dolores voluptatem sed.
     </p>
+    <p id="para" hidden>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolorem, perferendis rem doloremque molestias quas sit quibusdam voluptates dicta quasi deleniti incidunt amet atque cumque architecto laudantium quod dolore officiis!
+    </p>
+    <button id="button">Show Para</button>
 </body>
+<script>
+    const button = document.getElementById('button');
+    const para = document.getElementById('para');
+    let isShowed = false
+    button.addEventListener('click', () => {
+        if(isShowed){
+            para.hidden = true
+            button.innerText = "Show"
+            isShowed = false
+        }else{
+            para.hidden = false 
+            button.innerText = "Hide"
+            isShowed = true
+        }
+    })
+</script>
 </html>
